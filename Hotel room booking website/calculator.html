@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>calculator</title>
+        <link rel="stylesheet" href="F:\internshala\Complete solution - module 2 and 3 assignment\cal.css"/>
+    </head>
+    <body>
+      <table class="calc">
+        <tr>
+            <td colspan="3" class="outputtext" >
+                <input class="display-box" type="text" id="result" disabled/>
+            </td>
+            <!--clearScreen() function clear all the values-->
+            <td>
+            <input
+            class="button"
+            type="button"
+            value="C"
+            onclick="clearscreen()"
+            style="background-color:blueviolet"/>
+            </td>
+        </tr>
+        <tr>
+            <!--display() function display the value click button-->
+            <td>
+                <input
+                class="button" type="button" value="1" onclick="display('1')"/>
+            </td>
+            <td>
+                <input
+                class="button" type="button" value="2" onclick="display('2')"/>
+            </td>
+            <td>
+                <input
+                class="button" type="button" value="3" onclick="display('3')"/>
+            </td>
+            <td>
+                <input
+                class="button" type="button" value="/" onclick="display('/')"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <input 
+                class="button"
+                type="button"
+                value="4"
+                onclick="display('4')"/>
+            </td>
+            <td>
+            <input 
+            class="button"
+            type="button"
+            value="5"
+            onclick="display('5')"/>
+            </td>
+            <td>
+            <input 
+            class="button"
+            type="button"
+            value="6"
+            onclick="display('6')"/>
+            </td>
+            <td>
+                <input 
+                class="button"
+                type="button"
+                value="-"
+                onclick="display('-')"/>
+                </td>
+                <tr>
+        <td>
+                    <input 
+                    class="button"
+                    type="button"
+                    value="7"
+                    onclick="display('7')"/>
+                    </td>
+                    <td>
+                        <input 
+                        class="button"
+                        type="button"
+                        value="8"
+                        onclick="display('8')"/>
+                        </td><td>
+                            <input 
+                            class="button"
+                            type="button"
+                            value="9"
+                            onclick="display('9')"/>
+                            </td>
+                            <td>
+                                <input 
+                                class="button"
+                                type="button"
+                                value="+"
+                                onclick="display('+')"/>
+                                </td>
+                                </tr>
+                                <td>
+                                    <input 
+                                    class="button"
+                                    type="button"
+                                    value="."
+                                    onclick="display('.')"/>
+                                    </td>
+                                    <td>
+                                        <input 
+                                        class="button"
+                                        type="button"
+                                        value="0"
+                                        onclick="display('0')"/>
+                                        </td>
+                                        <td>
+                                            <input 
+                                            class="button"
+                                            type="button"
+                                            value="*"
+                                            onclick="display('*')"/>
+                                            </td>
+                                        <!--calculate() function evaluvate the mathematical expresson--> 
+                                        <td>
+                                            <input
+                                            class="button" type="button" value="="
+                                            onclick="calculate()"
+                                            style="background-color:chartreuse"/>
+                                        </td>           
+                            </tr>
+    </table>
+    <script type="text/javascript" src="F:\internshala\Complete solution - module 2 and 3 assignment\cal.js"></script>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBK2aZQRG2Dzxv3ynG2m1gmdeEpy8tablI",
+          authDomain: "blood-ocxy-1.firebaseapp.com",
+          databaseURL: "https://blood-ocxy-1-default-rtdb.firebaseio.com",
+          projectId: "blood-ocxy-1",
+          storageBucket: "blood-ocxy-1.appspot.com",
+          messagingSenderId: "55838002758",
+          appId: "1:55838002758:web:f962e7e87d6f35815f4447",
+          measurementId: "G-NTPBYPG7EP"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    </body>
+    </html>
